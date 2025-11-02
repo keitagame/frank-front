@@ -4,6 +4,7 @@
   
   <title>FRANK-創作陣</title>
   <style>
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap');
     body{
       margin:0;
       background:rgb(255, 255, 255);
@@ -66,15 +67,18 @@
   }
  
   .hero{
+    color:rgb(0, 0, 0);
     opacity:0;
     animation: oo 1s ease forwards;
     animation-delay: 3500ms;
     font-size:clamp(3rem,4vw,5rem);
   }
   .text{
+    color:rgb(0, 0, 0);
     position: relative;
     font-weight:300;
     margin-top:10px;
+    margin-bottom:10px;
     font-size:clamp(7rem,12vw,18vw);
   }
  
@@ -109,7 +113,80 @@
 @keyframes show {
   to { opacity: 1; }
 }
+a {
+    padding: 0.65rem 0.5rem;
+      color: #000000;
+      text-decoration: none;
+    }
 
+    a:hover {
+      color: #00ffff;
+    }
+
+    header, footer {
+      background: #111;
+      text-align: center;
+      padding: 0px;
+    }
+
+    nav {
+      
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      
+      padding: 0rem;
+     
+    }
+   
+    nav a {
+      font-size: clamp(0.7rem, 0.8vw, 1.2rem);
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+.na{
+  margin: 0px;
+      padding:0.65rem 0px;
+     
+      
+      z-index:10;
+      text-align: center;
+      
+}
+.hero-en{
+  color:rgb(0, 0, 0);
+  font-family: "Momo Trust Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  opacity:0;
+  margin-top:0px;
+  padding-left:1em;
+  animation: show 2s 1s forwards; /* 2秒後に表示 */
+  animation-delay: 5s;
+  font-size: 20px;
+  font-weight:500;
+  margin-bottom:0em;
+}
+.hero2 {
+     margin: 0px;
+      padding: 10%;
+     
+      
+      z-index:10;
+      
+      padding:0%;
+    }
+    .btn2 {
+      display: inline-block;
+     
+      padding: 0.65rem 1.5rem;
+      background: transparent;
+      color: #000000;
+      border: #000000 1px solid;
+      border-radius: 50px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -135,8 +212,24 @@
  
 
   </div>
+  <div class="na"> <nav>
+   
+    <a href="#">ホーム</a>
+    <a href="#">イベント</a>
+    <a href="https://frankservice.instatus.com">サービス</a>
+     <a href="https://x.com/home" class="btn2">コンタクト</a>
+    
+  </nav></div>
+  <div class="hero2">
   <div class="hero">創作は率直であれ。</div>
   <div class="nokkeru"></div>
   <h1 class="text"><span>FRANK!!</span></h1>
+  <div class="hero-en">Be frank in your creations.</div>
+  <div class="hero-en">・programming</div>
+  <div class="hero-en">・music</div>
+  <div class="hero-en">・art</div>
+  <div class="hero-en">・game</div>
+  <div class="hero-en">・etc...</div>
+  </div>
 </body>
 </html>
