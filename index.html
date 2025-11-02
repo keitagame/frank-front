@@ -27,6 +27,7 @@
       background:black;
       animation-delay: 3s;
       pointer-events: none;
+      z-index:10;
     }
     @keyframes moveRight {
   
@@ -48,6 +49,14 @@
     letter-spacing: 0.82em;
   }
 }
+@keyframes ooa {
+  
+  to {
+    opacity:1;
+    
+  }
+}
+
     svg{
       
       animation: moveleft 0.3s ease forwards;
@@ -104,6 +113,70 @@
   animation-delay: 5s;
 }
 
+ .tex{
+
+  color:rgb(0, 0, 0);
+    position: relative;
+    font-weight:300;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:clamp(4rem,5vw,8vw);
+}
+
+/* 青い帯 */
+.tex.in-view::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: #00ffae;
+  z-index: 1;
+  animation: cover 2s forwards;
+  animation-delay: 0s;
+}
+.tex span{
+opacity: 0;
+}
+/* 文字を最初は透明にしておく */
+.tex.in-view span {
+  opacity: 0;
+  animation: show 0s 0s forwards; /* 2秒後に表示 */
+  animation-delay: 800ms;
+}
+.texa{
+
+  color:rgb(0, 0, 0);
+    position: relative;
+    font-weight:300;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:clamp(4rem,5vw,8vw);
+}
+.texa span{
+opacity: 0;
+}
+/* 青い帯 */
+.texa.in-view::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: #8c00ff;
+  z-index: 1;
+  animation: cover 2s forwards;
+  animation-delay: 0s;
+}
+
+/* 文字を最初は透明にしておく */
+.texa.in-view span {
+  opacity: 0;
+  animation: show 0s 0s forwards; /* 2秒後に表示 */
+  animation-delay: 800ms;
+}
 @keyframes cover {
   0%   { width: 0; left: 0; }
   50%  { width: 100%; left: 0; }   /* 文字全体を覆う */
@@ -205,6 +278,29 @@ a {
       border-radius: 50px;
       font-weight: bold;
     }
+    .section{
+      border-bottom:2px solid black;
+      opacity:0;
+       margin-top:0em;
+       letter-spacing: 0.0em;
+       font-weight:400;
+    }
+    .sub{
+     
+      opacity:0;
+      margin-top:5em;
+      letter-spacing: 0.22em;
+      color:rgb(39, 39, 39);
+      font-family: "Momo Trust Display", sans-serif;
+  font-weight: 300;
+  
+    }
+    .section.in-view{
+      animation: oo 2s ease-out forwards;
+    }
+     .sub.in-view{
+      animation: ooa 1s ease-out forwards;
+    }
   </style>
 </head>
 <body>
@@ -248,6 +344,34 @@ a {
   <div class="hero-en">・art</div>
   <div class="hero-en">・game</div>
   <div class="hero-en">・etc...</div>
+  
   </div>
+  <h2 class="sub">about us</h2>
+  <h1 class="section">私達について</h1>
+  <h1 class="tex"><span>私達は、</span></h1>
+  <h1 class="texa"><span>任意団体として、</span></h1>
+  <h1 class="tex"><span>あなたの創作を</span></h1>
+  <h1 class="texa"><span>サポートします。</span></h1>
+  <script>const io = new IntersectionObserver((entries) => {
+  for (const e of entries) {
+    if (e.isIntersecting) {
+      e.target.classList.add('in-view');
+      // 一度きりの再生なら監視解除（再入場でも再生しない）
+      io.unobserve(e.target);
+    } else {
+      // 再入場の度に再生したいなら解除せず、以下の行を有効化
+      // e.target.classList.remove('in-view');
+    }
+  }
+}, {
+  root: null,          // viewport
+  threshold: 0.5       // 10% 入ったらトリガー
+});
+
+document.querySelectorAll('.section').forEach(el => io.observe(el));
+document.querySelectorAll('.sub').forEach(el => io.observe(el));
+document.querySelectorAll('.tex').forEach(el => io.observe(el));
+document.querySelectorAll('.texa').forEach(el => io.observe(el));
+</script>
 </body>
 </html>
