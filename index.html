@@ -174,9 +174,27 @@ a {
      
       
       z-index:10;
-      
+      animation: dots-flow 1s linear infinite;
       padding:0%;
+      --dot-color: rgb(0, 0, 0);
+  --bg-color: #fff;
+  --gap: 54px;   /* グリッド間隔 */
+  --dot: 1px;    /* 点の直径 */
+
+  background-color: var(--bg-color);
+  background-image:
+    radial-gradient(circle, var(--dot-color) var(--dot), transparent var(--dot));
+  background-size: var(--gap) var(--gap);
+  background-position: center; /* 中央から均等に見せる */
     }
+    @keyframes dots-flow {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -54px 0; /* gap分だけ左に流す */
+  }
+}
     .btn2 {
       display: inline-block;
      
