@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   
-  <title>FRANK-創作陣</title>
+  <title>FRANK</title>
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap');
     body{
@@ -174,7 +174,7 @@ opacity: 0;
 /* 文字を最初は透明にしておく */
 .texa.in-view span {
   opacity: 0;
-  animation: show 0s 0s forwards; /* 2秒後に表示 */
+  animation: sho 0s 0s forwards; /* 2秒後に表示 */
   animation-delay: 800ms;
 }
 @keyframes cover {
@@ -184,7 +184,10 @@ opacity: 0;
 }
 
 @keyframes show {
-  to { opacity: 1; }
+  to { opacity: 1;}
+}
+@keyframes sho {
+  to { opacity: 1; background:black; color:white;}
 }
 a {
     padding: 0.65rem 0.5rem;
@@ -279,16 +282,18 @@ a {
       font-weight: bold;
     }
     .section{
-      border-bottom:2px solid black;
+      padding:5px;
+      border-bottom:1px solid black;
       opacity:0;
        margin-top:0em;
        letter-spacing: 0.0em;
        font-weight:400;
     }
     .sub{
-     
+      padding-left:5px;
       opacity:0;
       margin-top:5em;
+      margin-bottom:0em;
       letter-spacing: 0.22em;
       color:rgb(39, 39, 39);
       font-family: "Momo Trust Display", sans-serif;
@@ -365,7 +370,7 @@ a {
   }
 }, {
   root: null,          // viewport
-  threshold: 0.5       // 10% 入ったらトリガー
+  threshold: 1.0       // 10% 入ったらトリガー
 });
 
 document.querySelectorAll('.section').forEach(el => io.observe(el));
