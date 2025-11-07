@@ -2,210 +2,67 @@
 <html lang="ja">
 <head>
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta imgsrc="logo.svg" alt="Frank Dev Community Logo">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FRANK</title>
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Onest:wght@100..900&family=Stack+Sans+Headline:wght@200..700&display=swap');
     body{
+background:black;
       margin:0;
-      background:rgb(255, 255, 255);
     }
-    .tu{
-      font-size:50px;
-      color:white;
-    }
-    .logo{
-      display:flex;
-      position:fixed;
-      top:0px;
-      left:0px;
-      animation: moveRight 0.3s ease forwards;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center; /* 横方向中央 */
-      align-items: center;     /* 縦方向中央 */
-      background:black;
-      animation-delay: 3s;
-      pointer-events: none;
-      z-index:10;
-    }
-    @keyframes moveRight {
-  
-  to {
-    opacity:0;
-  }
+p, h1, h2 {
+  margin: 0;
+  padding: 0;
 }
-@keyframes moveleft {
-  
-  to {
-    transform: scale(8.0);
-    opacity:0;
-  }
-}
-@keyframes oo {
-  
-  to {
-    opacity:1;
+
+    .hero{
+display:flex;
+line-height: 0.8;
+padding:0px;
+      background: linear-gradient(to right, #00ffbf, #8400ff); /* 左→右にオレンジ系グラデーション */
+  -webkit-background-clip: text; /* 背景を文字の形に切り抜く */
+  -webkit-text-fill-color: transparent; /* 文字色を透明にする */
+      font-family: "Lexend Deca", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 350;
+      font-style: normal;
+      font-size:clamp(4em,15vw,17em);
+      margin-top:0px;
+      margin-bottom:0px;
+    }
+    .hero2{
+    color:rgb(255, 255, 255);
+    margin-top:50px;
     letter-spacing: 0.82em;
+    font-size:clamp(1.1rem,3vw,4rem);
+    padding-bottom:0em;
   }
+.hero3{
+color:rgb(255, 255, 255);
+      font-family: "Lexend Deca", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+background:black;
+      font-style: normal;
+      font-size:clamp(4em,8vw,10em);
+      margin-top:0px;
+      margin-bottom:0px;
 }
-@keyframes ooa {
-  
-  to {
-    opacity:1;
-    
-  }
+.logo{
+ height: 0.8em;   /* テキストの高さに追従 */
+  width: auto;   /* アスペクト比維持 */
+vertical-align: -0.145em; /* ほんの少し下げて字形に馴染ませる定番調整 */
 }
-
-    svg{
-      
-      animation: moveleft 0.3s ease forwards;
-      animation-delay: 3s;
-      pointer-events: none;
-      transform: scale(3.0);
-    }
-    line {
-    stroke-dasharray: 50;   /* 線の全長 */
-    stroke-dashoffset: 500;  /* 最初は全て隠す */
-    animation: draw 3s linear forwards;
-  }
-  @keyframes draw {
-    from{stroke-dashoffset: 500;}
-    
-    to { stroke-dashoffset: 0; }
-  }
- 
-  .hero{
-    color:rgb(0, 0, 0);
-    opacity:0;
-    animation: oo 1s ease forwards;
-    animation-delay: 3500ms;
-    font-size:clamp(3rem,4vw,5rem);
-  }
-  .text{
-    color:rgb(0, 0, 0);
-    position: relative;
-    font-weight:300;
-    margin-top:10px;
-    margin-bottom:10px;
-    font-size:clamp(7rem,12vw,18vw);
-  }
- 
-
-/* 青い帯 */
-.text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background: #00ffae;
-  z-index: 1;
-  animation: cover 2s forwards;
-  animation-delay: 4s;
+.con{
+background:black;
 }
-
-/* 文字を最初は透明にしておく */
-.text span {
-  opacity: 0;
-  animation: show 0s 1s forwards; /* 2秒後に表示 */
-  animation-delay: 5s;
-}
-
- .tex{
-
-  color:rgb(0, 0, 0);
-    position: relative;
-    font-weight:300;
-    margin-top:10px;
-    margin-bottom:10px;
-    font-size:clamp(4rem,5vw,8vw);
-}
-
-/* 青い帯 */
-.tex.in-view::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background: #00ffae;
-  z-index: 1;
-  animation: cover 2s forwards;
-  animation-delay: 0s;
-}
-.tex span{
-opacity: 0;
-}
-/* 文字を最初は透明にしておく */
-.tex.in-view span {
-  opacity: 0;
-  animation: show 0s 0s forwards; /* 2秒後に表示 */
-  animation-delay: 800ms;
-}
-.texa{
-
-  color:rgb(0, 0, 0);
-    position: relative;
-    font-weight:300;
-    margin-top:10px;
-    margin-bottom:10px;
-    font-size:clamp(4rem,5vw,8vw);
-}
-.texa span{
-opacity: 0;
-}
-/* 青い帯 */
-.texa.in-view::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background: #8c00ff;
-  z-index: 1;
-  animation: cover 2s forwards;
-  animation-delay: 0s;
-}
-
-/* 文字を最初は透明にしておく */
-.texa.in-view span {
-  opacity: 0;
-  animation: sho 0s 0s forwards; /* 2秒後に表示 */
-  animation-delay: 800ms;
-}
-@keyframes cover {
-  0%   { width: 0; left: 0; }
-  50%  { width: 100%; left: 0; }   /* 文字全体を覆う */
-  100% { width: 0; left: 100%; }   /* 右に抜けて消える */
-}
-
-@keyframes show {
-  to { opacity: 1;}
-}
-@keyframes sho {
-  to { opacity: 1; background:black; color:white;}
-}
-a {
-    padding: 0.65rem 0.5rem;
-      color: #000000;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #00ffff;
-    }
-
-    header, footer {
-      background: #111;
-      text-align: center;
-      padding: 0px;
-    }
-
-    nav {
+nav {
       
       display: flex;
       justify-content: center;
@@ -230,108 +87,29 @@ a {
       text-align: center;
       
 }
-.hero-en{
-  color:rgb(0, 0, 0);
-  font-family: "Momo Trust Display", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  opacity:0;
-  margin-top:0px;
-  padding-left:1em;
-  animation: show 2s 1s forwards; /* 2秒後に表示 */
-  animation-delay: 5s;
-  font-size: 20px;
-  font-weight:500;
-  margin-bottom:0em;
-}
-.hero2 {
-     margin: 0px;
-      padding: 10%;
-     
-      
-      z-index:10;
-      animation: dots-flow 1s linear infinite;
-      padding:0%;
-      --dot-color: rgb(0, 0, 0);
-  --bg-color: #fff;
-  --gap: 54px;   /* グリッド間隔 */
-  --dot: 1px;    /* 点の直径 */
-
-  background-color: var(--bg-color);
-  background-image:
-    radial-gradient(circle, var(--dot-color) var(--dot), transparent var(--dot));
-  background-size: var(--gap) var(--gap);
-  background-position: center; /* 中央から均等に見せる */
-    }
-    @keyframes dots-flow {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -54px 0; /* gap分だけ左に流す */
-  }
-}
-    .btn2 {
+.btn2 {
       display: inline-block;
      
       padding: 0.65rem 1.5rem;
       background: transparent;
-      color: #000000;
-      border: #000000 1px solid;
+      color: #ffffff;
+      border: #ffffff 1px solid;
       border-radius: 50px;
       font-weight: bold;
     }
-    .section{
-      padding:5px;
-      border-bottom:1px solid black;
-      opacity:0;
-       margin-top:0em;
-       letter-spacing: 0.0em;
-       font-weight:400;
+    a {
+    padding: 0.65rem 0.5rem;
+      color: #ffffff;
+      text-decoration: none;
     }
-    .sub{
-      padding-left:5px;
-      opacity:0;
-      margin-top:5em;
-      margin-bottom:0em;
-      letter-spacing: 0.22em;
-      color:rgb(39, 39, 39);
-      font-family: "Momo Trust Display", sans-serif;
-  font-weight: 300;
-  
-    }
-    .section.in-view{
-      animation: oo 2s ease-out forwards;
-    }
-     .sub.in-view{
-      animation: ooa 1s ease-out forwards;
+
+    a:hover {
+      color: #00ffff;
     }
   </style>
 </head>
 <body>
-<div class="logo">
-  
-  
-  <svg width="70" height="70" xmlns="http://www.w3.org/2000/svg">
-  
-  <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#8c52ff; stop-opacity:1" />
-      <stop offset="55%" style="stop-color:#5ce1e6; stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00bf63; stop-opacity:1" />
-    </linearGradient>
-  </defs>
-
-  
-  <line x1="10" y1="15" x2="60" y2="15" stroke="white" stroke-width="10" />
-  
-  <line x1="10" y1="35" x2="60" y2="35" stroke="white" stroke-width="10" />
-   <polygon points="10,60 10,10 60,60" fill="url(#grad1)" />
-</svg>
- 
-
-  </div>
-  <div class="na"> <nav>
+<div class="na"> <nav>
    
     <a href="#">ホーム</a>
     <a href="#">イベント</a>
@@ -339,44 +117,11 @@ a {
      <a href="https://x.com/home" class="btn2">コンタクト</a>
     
   </nav></div>
-  <div class="hero2">
-  <div class="hero">創作は率直であれ。</div>
-  <div class="nokkeru"></div>
-  <h1 class="text"><span>FRANK!!</span></h1>
-  <div class="hero-en">Be frank in your creations.</div>
-  <div class="hero-en">・programming</div>
-  <div class="hero-en">・music</div>
-  <div class="hero-en">・art</div>
-  <div class="hero-en">・game</div>
-  <div class="hero-en">・etc...</div>
-  
+<div class="con">
+  <h1 class="hero">BE FRANK</h1>
+  <h1 class="hero">WHEN<img src="logo.svg" class="logo"/></h1>
+  <h1 class="hero">CREATEING!!</h1>
+ 
   </div>
-  <h2 class="sub">about us</h2>
-  <h1 class="section">私達について</h1>
-  <h1 class="tex"><span>私達は、</span></h1>
-  <h1 class="texa"><span>任意団体として、</span></h1>
-  <h1 class="tex"><span>あなたの創作を</span></h1>
-  <h1 class="texa"><span>サポートします。</span></h1>
-  <script>const io = new IntersectionObserver((entries) => {
-  for (const e of entries) {
-    if (e.isIntersecting) {
-      e.target.classList.add('in-view');
-      // 一度きりの再生なら監視解除（再入場でも再生しない）
-      io.unobserve(e.target);
-    } else {
-      // 再入場の度に再生したいなら解除せず、以下の行を有効化
-      // e.target.classList.remove('in-view');
-    }
-  }
-}, {
-  root: null,          // viewport
-  threshold: 1.0       // 10% 入ったらトリガー
-});
-
-document.querySelectorAll('.section').forEach(el => io.observe(el));
-document.querySelectorAll('.sub').forEach(el => io.observe(el));
-document.querySelectorAll('.tex').forEach(el => io.observe(el));
-document.querySelectorAll('.texa').forEach(el => io.observe(el));
-</script>
-</body>
+  </body>
 </html>
