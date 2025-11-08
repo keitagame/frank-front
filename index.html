@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Onest:wght@100..900&family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Stack+Sans+Headline:wght@200..700&display=swap" rel="stylesheet">
@@ -66,6 +68,7 @@ vertical-align: -0.145em; /* ほんの少し下げて字形に馴染ませる定
 vertical-align: -0.145em; /* ほんの少し下げて字形に馴染ませる定番調整 */
 }
 .con{
+  margin-top:0px;
 background:black;
 
 }
@@ -76,18 +79,19 @@ nav {
       gap: 1rem;
       
       padding: 0rem;
+      margin-bottom:0px;
      
     }
    
     nav a {
-      font-size: clamp(0.7rem, 0.8vw, 1.2rem);
-      margin: 0 15px;
-      font-weight: bold;
+      font-size: clamp(0.5rem, 0.8vw, 0.9rem);
+      margin: 0 8px;
+      font-weight: 600;
     }
 
 .na{
   margin: 0px;
-      padding:0.65rem 0px;
+      padding:0.45rem 0px;
      
       
       z-index:10;
@@ -95,14 +99,38 @@ nav {
       
 }
 .btn2 {
+font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
       display: inline-block;
      
-      padding: 0.65rem 1.5rem;
+      padding: 0.75rem 1.7rem;
       background: transparent;
       color: #ffffff;
       border: #ffffff 1px solid;
       border-radius: 50px;
-      font-weight: bold;
+    
+    }
+    .btn {
+font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+      display: inline-block;
+     margin-left:10px;
+      padding: 0.75rem 1.7rem;
+      background: transparent;
+      color: #ffffff;
+      border: #ffffff 1px solid;
+      border-radius: 50px;
+    
+    }
+   
+    .n{
+font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:300;
+      gap:10px;
+      display:flex;
     }
     a {
     padding: 0.65rem 0.5rem;
@@ -117,13 +145,24 @@ nav {
       font-size: 30px;
       color:white;
       }
+.m{
+font-size:1em;
+font-weight:400;
+color:rgb(0, 0, 0);
+}
+.ka{
+  margin-left:10px;
+  font-weight:bold;
+  font-size:clamp(1em,4vw,5em);
+ color:white;
+}
   </style>
 </head>
 <body>
 <div class="na"> <nav>
     <img src="logo.svg" class="logoh"/>
     <a href="#">ホーム</a>
-    <a href="#">イベント</a>
+    
     <a href="https://frankservice.instatus.com">サービス</a>
      <a href="https://x.com/home" class="btn2">コンタクト</a>
     
@@ -134,6 +173,14 @@ nav {
   <h1 class="hero">CREATEING!!</h1>
   
   </div>
-  <h1 class="set"></h1>
+  <h1 class="m">frankはあなたの創作をサポートします。</h1>
+  <a href="https://x.com/home" class="btn">参加してみる→</a>
+  <h1 class="m">frankはあなたの創作をサポートします。</h1>
+  <h1 class="ka">この世界は、</h1>
+  <h1 class="ka">常にあらゆる</h1>
+  <h1 class="ka">アイディアで溢れています</h1>
+  <h1 class="ka">私達は、デジタル創作を通じて、</h1>
+  <h1 class="ka">そのアイディアを形にしたいです。</h1>
+  
   </body>
 </html>
