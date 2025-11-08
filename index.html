@@ -23,7 +23,7 @@ p, h1, h2 {
 
     .hero{
 display:flex;
-line-height: 0.8;
+line-height: 0.78;
 padding:0px;
       background: linear-gradient(to right, #00ffbf, #8400ff); /* 左→右にオレンジ系グラデーション */
   -webkit-background-clip: text; /* 背景を文字の形に切り抜く */
@@ -59,8 +59,15 @@ background:black;
   width: auto;   /* アスペクト比維持 */
 vertical-align: -0.145em; /* ほんの少し下げて字形に馴染ませる定番調整 */
 }
+.logoh{
+
+  height: 2.3em;   /* テキストの高さに追従 */
+  width: auto;   /* アスペクト比維持 */
+vertical-align: -0.145em; /* ほんの少し下げて字形に馴染ませる定番調整 */
+}
 .con{
 background:black;
+
 }
 nav {
       
@@ -106,11 +113,15 @@ nav {
     a:hover {
       color: #00ffff;
     }
+    .set{
+      font-size: 30px;
+      color:white;
+      }
   </style>
 </head>
 <body>
 <div class="na"> <nav>
-   
+    <img src="logo.svg" class="logoh"/>
     <a href="#">ホーム</a>
     <a href="#">イベント</a>
     <a href="https://frankservice.instatus.com">サービス</a>
@@ -121,7 +132,8 @@ nav {
   <h1 class="hero">BE FRANK</h1>
   <h1 class="hero">WHEN<img src="logo.svg" class="logo"/></h1>
   <h1 class="hero">CREATEING!!</h1>
- 
+  
   </div>
+  <h1 class="set"></h1>
   </body>
 </html>
